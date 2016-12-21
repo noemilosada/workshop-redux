@@ -16,3 +16,4 @@ store.dispatch(actions.increment());
 store.dispatch(actions.decrement());
 store.dispatch(actions.increment());
 store.dispatch(actions.double());
+store.dispatch(actions.multiply(3));
