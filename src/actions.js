@@ -2,6 +2,7 @@
 const ADD_ITEM = 'ADD_ITEM';
 const TOGGLE_ITEM = 'TOGGLE_ITEM';
 const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER';
+const REMOVE_ITEM = 'REMOVE_ITEM';
 
 // Possible values of the visibility filter
 const visibilityFilters = { SHOW_ALL: 'SHOW_ALL', SHOW_INCOMPLETE: 'SHOW_INCOMPLETE' };
@@ -19,13 +20,19 @@ function setVisibilityFilter (filter) {
   return { type: SET_VISIBILITY_FILTER, payload: filter };
 }
 
+function removeItem (index) {
+  return { type: REMOVE_ITEM, payload: index };
+}
+
 module.exports = {
   ADD_ITEM,
   TOGGLE_ITEM,
   SET_VISIBILITY_FILTER,
+  REMOVE_ITEM,
   visibilityFilters,
 
   addItem,
   toggleItem,
-  setVisibilityFilter
+  setVisibilityFilter,
+  removeItem
 };
